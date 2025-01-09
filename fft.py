@@ -122,6 +122,3 @@ def multiply(A: list, B: list):  # fft 활용해서 두 숫자 곱하는거긴�
         carry //= 10
 
     return ''.join(map(str, reversed(c)))
-
-A, B = map(int,input().split())
-print(int(multiply(A, B)))
