@@ -78,3 +78,11 @@ def Binet(n):
     return round((phi ** n - psi ** n) / sqrt5)
 
 print(int(Binet(1000000)))
+
+
+
+# 피사노 주기 알면 좋음
+# 피사노 주기 알면 좋음
+# 피사노 주기 알면 좋음
+
+
