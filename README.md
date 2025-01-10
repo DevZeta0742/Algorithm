@@ -1,4 +1,4 @@
 # Algorithm
 Functions collection
 
-이것만 있으면 나도 백준 플레?!
+내가 쓸려고 만든 함수들 모음
