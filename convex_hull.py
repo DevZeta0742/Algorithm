@@ -20,7 +20,7 @@ def convex_hull(points: list):
     return lower[:-1] + upper[:-1]
 
 def dist(a: list, b: list):
-    return ((a[0] - b[0])**2 + (a[1] - b[1])**2)
+    return (a[0] - b[0])**2 + (a[1] - b[1])**2
 
 def rotating_calipers(hull: list):  # 가장 먼 두 점 찾기
     n = len(hull)
