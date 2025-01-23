@@ -2,6 +2,7 @@ import sys; input = sys.stdin.readline
 from collections import defaultdict
 import heapq
 
+# 우선순위 큐 이용
 def prim(n, tree):
     visited = [0] * (n+1)
     min_heap = [(0, 1)]
@@ -21,8 +22,39 @@ def prim(n, tree):
 
     return mst_w
 
-def Kruskal(): # 나중에..
-  
+# Kruskal (union find 이용)
+def find(parent, x):
+    if parent[x] != x:
+        parent[x] = find(parent, parent[x])
+
+    return parent[x]
+
+def union(parent, a, b):
+    a = find(parent, a)
+    b = find(parent, b)
+
+    if a < b:
+        parent[b] = a
+    else:
+        parent[a] = b
+
+def Kruskal(n, tree):
+    parent = [i for i in range(n + 1)]
+    mst_w = 0
+    edges = []
+
+    for node in tree:
+        for next_node, weight in tree[node]:
+            edges.append((weight, node, next_node))
+
+    edges.sort()
+
+    for weight, a, b in edges:
+        if find(parent, a) != find(parent, b):
+            union(parent, a, b)
+            mst_w += weight
+
+    return mst_w
 
 v, e = map(int,input().split()) # 정점, 간선
 tree = defaultdict(list)
