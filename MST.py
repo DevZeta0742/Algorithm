@@ -2,7 +2,7 @@ import sys; input = sys.stdin.readline
 from collections import defaultdict
 import heapq
 
-# 우선순위 큐 이용
+# Prim MST (우선순위 큐 이용)
 def prim(n, tree):
     visited = [0] * (n+1)
     min_heap = [(0, 1)]
@@ -22,7 +22,7 @@ def prim(n, tree):
 
     return mst_w
 
-# Kruskal (union find 이용)
+# Kruskal MST (union find 이용)
 def find(parent, x):
     if parent[x] != x:
         parent[x] = find(parent, parent[x])
