@@ -1,6 +1,6 @@
 import bisect
 
-def lcs(arr):  # nlogn
+def lis(arr):  # nlogn
     lst = []
     for num in arr:
         pos = bisect.bisect_left(lst, num)
