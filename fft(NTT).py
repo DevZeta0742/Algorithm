@@ -1,3 +1,4 @@
+# Cooley-Tukey algorithm
 from math import log2, ceil
 
 p = 998244353
